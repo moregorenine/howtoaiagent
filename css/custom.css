@@ -38,7 +38,7 @@
 /* ── Slides ── */
 .reveal .slides section {
   text-align: left;
-  padding: 40px 60px;
+  padding: 20px 60px 40px 60px; /* 상단 여백 조이기 */
   height: 100%;
   box-sizing: border-box;
 }
@@ -71,6 +71,7 @@
   font-weight: 700;
   color: var(--color-accent);
   letter-spacing: -0.01em;
+  margin-top: 0; /* 모든 h2에 대해 상단 마진 0 적용 */
   margin-bottom: 0.5em;
   border-bottom: 2px solid rgba(0, 212, 255, 0.3);
   padding-bottom: 0.3em;
@@ -99,12 +100,14 @@
 }
 
 /* ── Lists ── */
-.reveal ul, .reveal ol {
+.reveal ul,
+.reveal ol {
   margin: 0;
   padding-left: 1.2em;
 }
 
-.reveal ul li, .reveal ol li {
+.reveal ul li,
+.reveal ol li {
   font-size: 0.88em;
   line-height: 1.9;
   color: var(--color-text);
@@ -197,10 +200,29 @@
   font-family: var(--font-mono);
 }
 
-.badge-purple { background: rgba(108,99,255,0.2); border: 1px solid rgba(108,99,255,0.5); color: #a89dff; }
-.badge-cyan   { background: rgba(0,212,255,0.15); border: 1px solid rgba(0,212,255,0.4);  color: #00d4ff; }
-.badge-red    { background: rgba(255,107,107,0.15); border: 1px solid rgba(255,107,107,0.4); color: #ff6b6b; }
-.badge-green  { background: rgba(0,230,118,0.15); border: 1px solid rgba(0,230,118,0.4); color: #00e676; }
+.badge-purple {
+  background: rgba(108, 99, 255, 0.2);
+  border: 1px solid rgba(108, 99, 255, 0.5);
+  color: #a89dff;
+}
+
+.badge-cyan {
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00d4ff;
+}
+
+.badge-red {
+  background: rgba(255, 107, 107, 0.15);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  color: #ff6b6b;
+}
+
+.badge-green {
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+  color: #00e676;
+}
 
 /* ── Highlight Box ── */
 .highlight-box {
@@ -269,7 +291,7 @@
 /* ── Progress Bar Override ── */
 .reveal .progress {
   height: 4px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .reveal .progress span {
@@ -281,10 +303,17 @@
 .reveal .slide-number {
   background: transparent;
   font-family: var(--font-mono);
-  font-size: 0.75em;
+  font-size: 15px;
   color: var(--color-muted);
-  bottom: 18px;
+  bottom: 45px;
   right: 24px;
+  letter-spacing: -0.06em;
+  /* 자간 축소 */
+}
+
+.reveal .slide-number-delimiter {
+  margin: 0 1px;
+  /* 구분자 좌우 공간 축소 */
 }
 
 /* ── Controls Override ── */
@@ -321,6 +350,11 @@
 
 /* ── Responsive text scaling ── */
 @media (max-width: 1024px) {
-  .reveal h1 { font-size: 2em; }
-  .reveal h2 { font-size: 1.5em; }
+  .reveal h1 {
+    font-size: 2em;
+  }
+
+  .reveal h2 {
+    font-size: 1.5em;
+  }
 }
