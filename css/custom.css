@@ -38,7 +38,8 @@
 /* ── Slides ── */
 .reveal .slides section {
   text-align: left;
-  padding: 20px 60px 40px 60px; /* 상단 여백 조이기 */
+  padding: 5px 5px 5px 5px;
+  /* 상단 여백 조이기 */
   height: 100%;
   box-sizing: border-box;
 }
@@ -71,7 +72,8 @@
   font-weight: 700;
   color: var(--color-accent);
   letter-spacing: -0.01em;
-  margin-top: 0; /* 모든 h2에 대해 상단 마진 0 적용 */
+  margin-top: 0;
+  /* 모든 h2에 대해 상단 마진 0 적용 */
   margin-bottom: 0.5em;
   border-bottom: 2px solid rgba(0, 212, 255, 0.3);
   padding-bottom: 0.3em;
