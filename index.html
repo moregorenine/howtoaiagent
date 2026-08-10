@@ -232,67 +232,71 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         03. AI Agent란?
+         04. Antigravity 개발 방법론
     ═══════════════════════════════════════════ -->
       <section>
         <section>
-          <h3>Chapter 01</h3>
-          <h2>🧠 AI Agent란?</h2>
-          <p>LLM을 두뇌로, 도구(Tool)를 손발로 — 스스로 계획하고 실행하는 소프트웨어</p>
+          <h2>AI Agent 개발 도구의 변천사</h2>
+          <p style="margin-bottom: 0.8em; color: var(--color-accent); font-weight: 500; font-size: 0.9em;">❖ 단순 보조 도구에서
+            프로젝트 단위 자율 협업 파트너로의 발전</p>
 
-          <div class="highlight-box cyan" style="margin-top: 1.5em;">
-            <strong>"AI Agent = LLM + Planning + Tool Use + Memory + Action"</strong>
-          </div>
+          <div class="grid-3" style="font-size: 0.8em;">
+            <!-- 1세대 -->
+            <div class="glass-card fragment fade-up">
+              <strong style="color: var(--color-primary); display: block; margin-bottom: 0.4em;">▪ 1세대: 인라인 & 채팅
+                어시스턴트</strong>
+              <ul style="padding-left: 1em; margin: 0; font-size: 0.85em; line-height: 1.6;">
+                <li><strong>주요 도구</strong>: GitHub Copilot, 초기 Chat 툴</li>
+                <li><strong>작동 범위</strong>: 단일 파일 및 현재 보고 있는 에디터 창</li>
+                <li><strong>한계점</strong>: 컨텍스트 범위가 매우 좁아 프로젝트 전체 맥락 이해 불가</li>
+              </ul>
+            </div>
 
-          <div class="grid-3" style="margin-top: 1.5em;">
-            <div class="glass-card fragment fade-up" style="text-align:center;">
-              <div class="emoji-lg">🧩</div>
-              <strong>Planning</strong>
-              <p style="font-size:0.75em; margin-top:0.4em;">목표를 단계로 분해하고 순서를 결정</p>
+            <!-- 2세대 -->
+            <div class="glass-card fragment fade-up">
+              <strong style="color: var(--color-primary); display: block; margin-bottom: 0.4em;">▪ 2세대: CLI 기반 프로젝트
+                에이전트</strong>
+              <ul style="padding-left: 1em; margin: 0; font-size: 0.85em; line-height: 1.6;">
+                <li><strong>주요 도구</strong>: Claude Code, SWE-agent 등</li>
+                <li><strong>작동 범위</strong>: IDE 비종속형, 프로젝트 Root 중심</li>
+                <li><strong>특장점</strong>: 터미널 명령어 실행, 전체 코드베이스 맥락 및 다중 파일 수정 대응</li>
+              </ul>
             </div>
-            <div class="glass-card fragment fade-up" style="text-align:center;">
-              <div class="emoji-lg">🔧</div>
-              <strong>Tool Use</strong>
-              <p style="font-size:0.75em; margin-top:0.4em;">파일 읽기/쓰기, 검색, 코드 실행</p>
-            </div>
-            <div class="glass-card fragment fade-up" style="text-align:center;">
-              <div class="emoji-lg">🔁</div>
-              <strong>Feedback Loop</strong>
-              <p style="font-size:0.75em; margin-top:0.4em;">결과를 보고 다음 행동을 조정</p>
+
+            <!-- 3세대 -->
+            <div class="glass-card fragment fade-up">
+              <strong style="color: var(--color-primary); display: block; margin-bottom: 0.4em;">▪ 3세대: IDE 통합형 자율
+                에이전트</strong>
+              <ul style="padding-left: 1em; margin: 0; font-size: 0.85em; line-height: 1.6;">
+                <li><strong>주요 도구</strong>: Antigravity, Cursor Composer</li>
+                <li><strong>작동 범위</strong>: 개발 IDE 환경 내 CLI 자율 개발 일원화</li>
+                <li><strong>특장점</strong>: 코드 작성, 테스트, 브라우저 피드백 검증까지 수행하는 페어 프로그래머</li>
+              </ul>
             </div>
           </div>
-          <aside class="notes">
-            AI Agent는 단순히 텍스트를 생성하는 게 아니라, 스스로 계획을 세우고 도구를 사용해서 목표를 달성합니다.
-          </aside>
         </section>
-
         <section>
-          <h2>🆚 챗봇 vs AI Agent</h2>
-          <div class="grid-2" style="margin-top: 1.2em; align-items: start;">
-            <div>
-              <div class="badge badge-red">기존 챗봇</div>
-              <div class="glass-card" style="margin-top:0.6em; border-color: rgba(255,107,107,0.3);">
-                <ul>
-                  <li>단일 질문 → 단일 응답</li>
-                  <li>컨텍스트가 짧음</li>
-                  <li>도구 사용 불가</li>
-                  <li>사람이 결과를 직접 실행해야 함</li>
-                  <li>반복 작업 자동화 어려움</li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div class="badge badge-green">AI Agent</div>
-              <div class="glass-card" style="margin-top:0.6em; border-color: rgba(0,230,118,0.3);">
-                <ul>
-                  <li>목표 설정 → 자율적 멀티스텝 실행</li>
-                  <li>장기 컨텍스트 & 메모리</li>
-                  <li>코드 실행, 파일 I/O, 웹 검색</li>
-                  <li><strong>스스로 결과를 확인하고 수정</strong></li>
-                  <li>복잡한 워크플로우 완전 자동화</li>
-                </ul>
-              </div>
-            </div>
+          <h2>기본 화면</h2>
+          <div class="glass-card"
+            style="display: flex; justify-content: center; align-items: center; padding: 0.6em; width: 100%; max-width: 1600px; margin: 0.5em auto 0 auto; box-sizing: border-box;">
+            <img src="idea_default.png" alt="idea 기본 화면"
+              style="max-width: 100%; max-height: 900px; width: auto; height: auto; border-radius: 8px; border: 1px solid var(--color-glass-border); box-shadow: 0 12px 40px rgba(0,0,0,0.6);" />
+          </div>
+        </section>
+        <section>
+          <h2>지원 모델</h2>
+          <div class="glass-card"
+            style="display: flex; justify-content: center; align-items: center; padding: 0.6em; width: 100%; max-width: 1600px; margin: 0.5em auto 0 auto; box-sizing: border-box;">
+            <img src="idea_models.png" alt="지원 모델 화면"
+              style="max-width: 100%; max-height: 900px; width: auto; height: auto; border-radius: 8px; border: 1px solid var(--color-glass-border); box-shadow: 0 12px 40px rgba(0,0,0,0.6);" />
+          </div>
+        </section>
+        <section>
+          <h2>토큰 사용현황</h2>
+          <div class="glass-card"
+            style="display: flex; justify-content: center; align-items: center; padding: 0.6em; width: 100%; max-width: 1600px; margin: 0.5em auto 0 auto; box-sizing: border-box;">
+            <img src="idea_tokens.png" alt="토큰 사용현황 화면"
+              style="max-width: 100%; max-height: 900px; width: auto; height: auto; border-radius: 8px; border: 1px solid var(--color-glass-border); box-shadow: 0 12px 40px rgba(0,0,0,0.6);" />
           </div>
         </section>
       </section>
