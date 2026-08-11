@@ -80,8 +80,34 @@
           <h2>기본 화면</h2>
           <div class="glass-card"
             style="display: flex; justify-content: center; align-items: center; padding: 0.6em; width: 100%; max-width: 1600px; margin: 0.5em auto 0 auto; box-sizing: border-box;">
-            <img src="idea_default.png" alt="idea 기본 화면"
-              style="max-width: 100%; max-height: 900px; width: auto; height: auto; border-radius: 8px; border: 1px solid var(--color-glass-border); box-shadow: 0 12px 40px rgba(0,0,0,0.6);" />
+            <div style="position: relative; display: inline-block; max-width: 100%; max-height: 900px;">
+              <img src="idea_default.png" alt="idea 기본 화면"
+                style="max-width: 100%; max-height: 900px; width: auto; height: auto; border-radius: 8px; border: 1px solid var(--color-glass-border); box-shadow: 0 12px 40px rgba(0,0,0,0.6); display: block;" />
+
+              <!-- 좌측 메뉴 하이라이트 (빨강) -->
+              <div class="fragment fade-up"
+                style="position: absolute; left: 0%; top: 0%; width: 27%; height: 100%; border: 3px solid #ff1744; box-shadow: 0 0 15px rgba(255, 23, 68, 0.4); background-color: rgba(255, 23, 68, 0.05); border-radius: 6px; box-sizing: border-box; pointer-events: none;">
+                <span
+                  style="position: absolute; top: 10px; left: 10px; background-color: #ff1744; color: #fff; font-size: 0.45em; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-family: sans-serif; letter-spacing: 0.5px;">Navigation
+                  (메뉴)</span>
+              </div>
+
+              <!-- Editor 하이라이트 (초록) -->
+              <div class="fragment fade-up"
+                style="position: absolute; left: 27%; top: 0%; width: 48%; height: 100%; border: 3px solid #00e676; box-shadow: 0 0 15px rgba(0, 230, 118, 0.4); background-color: rgba(0, 230, 118, 0.05); border-radius: 6px; box-sizing: border-box; pointer-events: none;">
+                <span
+                  style="position: absolute; top: 10px; left: 10px; background-color: #00e676; color: #000; font-size: 0.45em; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-family: sans-serif; letter-spacing: 0.5px;">Editor
+                  (편집기)</span>
+              </div>
+
+              <!-- Chat 창 하이라이트 (파랑) -->
+              <div class="fragment fade-up"
+                style="position: absolute; left: 75%; top: 0%; width: 25%; height: 100%; border: 3px solid #00b0ff; box-shadow: 0 0 15px rgba(0, 176, 255, 0.4); background-color: rgba(0, 176, 255, 0.05); border-radius: 6px; box-sizing: border-box; pointer-events: none;">
+                <span
+                  style="position: absolute; top: 10px; left: 10px; background-color: #00b0ff; color: #fff; font-size: 0.45em; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-family: sans-serif; letter-spacing: 0.5px;">AI
+                  Chat (챗 창)</span>
+              </div>
+            </div>
           </div>
         </section>
         <section>
